@@ -1,0 +1,154 @@
+:root {
+  --blue: #77c4dd;
+  --off-white: #e7e5de;
+}
+html,
+body {
+  height: 100%;
+}
+a,
+a:hover,
+a:visited,
+a:link,
+a:active, 
+p,
+div,
+ul,
+li,
+.card
+ {
+  text-decoration: none;  
+}
+main > .container {
+  padding: 60px 15px 0;
+  margin-bottom: 5rem;
+}
+body {
+  background: var(--off-white);
+  background-repeat: no-repeat;
+  margin: auto;
+  width: 100%;
+
+  overflow-x: hidden;
+}
+.sticky-nav {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.nav-item {
+  position: relative;
+}
+
+.nav-item:hover:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--blue);
+}
+
+.skills {
+  display: inline-block;
+  text-decoration: underline;
+}
+ul > li { 
+  text-decoration: none; 
+  list-style:none;
+  padding-right: 5px;
+  
+
+}
+.col-li {
+  list-style-type: none;
+
+  text-decoration-color: white;
+  text-decoration-thickness: 2px;
+}
+hr.rounded {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
+}
+.black-stroke {
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+}
+.softer-dark {
+  background-color: #4e4747;
+}
+.i-border {
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 2px;
+}
+h2 {
+  padding: 30px 0 8px;
+  position: relative;
+}
+
+h2::before {
+  content: "";
+  position: absolute;
+  left: 3%;
+  bottom: 8px;
+  width: 150px;
+  height: 14px;
+  transform: skew(-12deg) translateX(-50%);
+  background: var(--blue);
+  z-index: -1;
+}
+/* img border */
+.tilted-border {  
+  border-radius: 10px;
+  position: relative;
+  padding: 0;
+}
+
+.tilted-border:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 100%;
+  height: 100%;
+  border: 5px solid var(--blue);
+  border-radius: 10px;
+  transform: rotate( 5deg);
+  pointer-events: none;
+  z-index: -1;
+}
+/* EDITING BOOTSTRAPS CARDS */
+
+.card-img-top img,
+.card-img-top {
+  border-radius: 20px 20px 0 0;
+  transition: top ease 0.5s;
+}
+.card-2 {
+  background-color: #eee;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: top ease 0.5s;
+}
+.card:hover,
+.card-img-top img {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+}
+.card-title {
+  font-weight: 700;
+  font-size: 1.5em;
+}
+.btn-skyblue {
+  background-color: var(--blue);
+  color: black;
+}
+.img-size {
+  width: 100%;
+  height: 100px;
+}
+        
