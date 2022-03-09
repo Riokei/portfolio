@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Quattrocento&display=swap');
 :root {
   --blue: #77c4dd;
   --blue-hover: #5f9eb3;
@@ -6,6 +7,10 @@
 html,
 body {
   height: 100%;
+  font-family: 'Quattrocento', serif;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Oswald', sans-serif;
 }
 a,
 a:hover,
@@ -47,6 +52,7 @@ body {
 }
 .nav-item {
   position: relative;
+  font-family: 'Oswald', sans-serif;
 }
 
 .nav-item:hover:after {
@@ -62,6 +68,13 @@ body {
 .skills {
   display: inline-block;
   text-decoration: underline;
+}
+.skill-i{
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+}
+.skill-i i{
+  color: var(--blue);
 }
 ul > li { 
   text-decoration: none; 
@@ -154,8 +167,12 @@ h2::before {
 .btn-skyblue {
   background-color: var(--blue);
   color: black;
+  font-family: 'Oswald', sans-serif;
+  transform-origin: center;
+  transition: all 0.2s ease-out;
 }
 .btn-skyblue:hover {
+  color: #fff;
   background-color: var(--blue-hover);
   
 }
@@ -163,4 +180,10 @@ h2::before {
   width: 100%;
   height: 100px;
 }
-        
+.social {
+  transition: all 0.5s ease-out;
+}        
+.social:hover {
+  transform: translate(0, -10%);
+  
+}
