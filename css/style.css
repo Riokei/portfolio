@@ -2,16 +2,82 @@
 :root {
   --blue: #77c4dd;
   --blue-hover: #5f9eb3;
-  --off-white: #e7e5de;
+  --off-white: #d8d8d8;
 }
+/* montserrat-regular - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/montserrat-v25-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/montserrat-v25-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/montserrat-v25-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/montserrat-v25-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/montserrat-v25-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/montserrat-v25-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+/* montserrat-500 - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/montserrat-v25-latin-500.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/montserrat-v25-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/montserrat-v25-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/montserrat-v25-latin-500.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/montserrat-v25-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/montserrat-v25-latin-500.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+/* barlow-condensed-regular - latin */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/barlow-condensed-v12-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/barlow-condensed-v12-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/barlow-condensed-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/barlow-condensed-v12-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/barlow-condensed-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/barlow-condensed-v12-latin-regular.svg#BarlowCondensed') format('svg'); /* Legacy iOS */
+}
+/* barlow-condensed-700 - latin */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/barlow-condensed-v12-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/barlow-condensed-v12-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/barlow-condensed-v12-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/barlow-condensed-v12-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/barlow-condensed-v12-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/barlow-condensed-v12-latin-700.svg#BarlowCondensed') format('svg'); /* Legacy iOS */
+}
+
+
+
+
 html,
 body {
   height: 100%;
-  font-family: 'Quattrocento', serif;
+  font-family: 'Montserrat', serif;
 }
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
 }
+h1 {
+  position: relative;
+  color: #ffffff;  
+  font-size: 3rem;
+  line-height: 0.9;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
 a,
 a:hover,
 a:visited,
@@ -37,12 +103,24 @@ main > .container {
   margin-bottom: 5rem;
 }
 body {
-  background: var(--off-white);
+  background-color: var(--off-white);
   background-repeat: no-repeat;
   margin: auto;
   width: 100%;
-
   overflow-x: hidden;
+}
+#welcome{
+  height: 100vh; 
+  width: 100%;
+  position: relative;
+  overflow: auto;       
+  background-position: 40% 10%;
+  background-size: 100% auto!important;  
+  background-repeat: no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .50)), url('/img/arnold-francisca-nPhl2x4fk2s-unsplash.jpg');  
+}
+.black-background {
+  background-color: black;
 }
 .sticky-nav {
   position: fixed;
@@ -100,11 +178,40 @@ hr.rounded {
 .softer-dark {
   background-color: #4e4747;
 }
+.bg-off-white {
+  background: var(--off-white);
+}
 .i-border {
   border: 2px solid white;
   border-radius: 50%;
   padding: 2px;
 }
+.title {  
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-bottom: 50px;
+}
+
+h2 {
+  color: #fff;    
+}
+
+/* h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;  
+  width: 100%;
+  height: 40px;
+  margin-left: -10px;
+  margin-right: auto;
+  transform: skew(-12deg) translateX(-50%); 
+  background: #1B1919;
+  z-index: -1;
+} */
+/* OLD
 h2 {
   padding: 30px 0 8px;
   position: relative;
@@ -121,6 +228,7 @@ h2::before {
   background: var(--blue);
   z-index: -1;
 }
+*/
 /* img border */
 .tilted-border {  
   border-radius: 10px;
@@ -143,7 +251,7 @@ h2::before {
   z-index: -1;
 }
 /* EDITING BOOTSTRAPS CARDS */
-
+/* 
 .card-img-top img,
 .card-img-top {
   border-radius: 20px 20px 0 0;
@@ -165,18 +273,6 @@ h2::before {
   font-weight: 700;
   font-size: 1.5em;
 }
-.btn-skyblue {
-  background-color: var(--blue);
-  color: black;
-  font-family: 'Oswald', sans-serif;
-  transform-origin: center;
-  transition: all 0.2s ease-out;
-}
-.btn-skyblue:hover {
-  color: #fff;
-  background-color: var(--blue-hover);
-  
-}
 .img-size {
   width: 100%;
   height: 100px;
@@ -187,9 +283,30 @@ h2::before {
 .social:hover {
   transform: translate(0, -10%);
   
+} */
+/* Form Inputs */
+.email-controls {
+  background-color: var(--off-white);
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;    
+  border: none;
+  border-bottom: 2px solid black;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+ 
 }
+
+
+
 @media (max-width: 992px) {
   .text-sm-center {
           text-align: center!important;
    } 
+   #welcome {background-size: cover!important;}
 }
