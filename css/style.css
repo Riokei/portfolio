@@ -56,10 +56,6 @@
        url('../fonts/barlow-condensed-v12-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../fonts/barlow-condensed-v12-latin-700.svg#BarlowCondensed') format('svg'); /* Legacy iOS */
 }
-
-
-
-
 html,
 body {
   height: 100%;
@@ -140,7 +136,7 @@ body {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--blue);
+  background-color: white;
 }
 
 .skills {
@@ -198,92 +194,6 @@ h2 {
   color: #fff;    
 }
 
-/* h2::before {
-  content: "";
-  position: absolute;
-  display: block;
-  left: 0;  
-  width: 100%;
-  height: 40px;
-  margin-left: -10px;
-  margin-right: auto;
-  transform: skew(-12deg) translateX(-50%); 
-  background: #1B1919;
-  z-index: -1;
-} */
-/* OLD
-h2 {
-  padding: 30px 0 8px;
-  position: relative;
-}
-
-h2::before {
-  content: "";
-  position: absolute;
-  left: 3%;
-  bottom: 8px;
-  width: 150px;
-  height: 14px;
-  transform: skew(-12deg) translateX(-50%);
-  background: var(--blue);
-  z-index: -1;
-}
-*/
-/* img border */
-.tilted-border {  
-  border-radius: 10px;
-  position: relative;
-  padding: 0;
-}
-
-.tilted-border:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  width: 100%;
-  height: 100%;
-  border: 5px solid var(--blue);
-  border-radius: 10px;
-  transform: rotate( 5deg);
-  pointer-events: none;
-  z-index: -1;
-}
-/* EDITING BOOTSTRAPS CARDS */
-/* 
-.card-img-top img,
-.card-img-top {
-  border-radius: 20px 20px 0 0;
-  transition: top ease 0.5s;
-}
-.card-2 {
-  background-color: #eee;
-  text-align: center;
-  border-radius: 20px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  transition: top ease 0.5s;
-}
-.card:hover,
-.card-img-top img {
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
-}
-
-.card-title {
-  font-weight: 700;
-  font-size: 1.5em;
-}
-.img-size {
-  width: 100%;
-  height: 100px;
-}
-.social {
-  transition: all 0.5s ease-out;
-}        
-.social:hover {
-  transform: translate(0, -10%);
-  
-} */
 /* Form Inputs */
 .email-controls {
   background-color: var(--off-white);
@@ -301,8 +211,19 @@ h2::before {
   appearance: none;
  
 }
-
-
+.opacity {
+  opacity: 0;
+}
+/* Animations */
+.fade-in-text { 
+  -webkit-animation: 3s ease 0s normal forwards 1 fadein;
+  animation: 3s ease 0s normal forwards 1 fadein;
+}
+@keyframes fadein {
+  0% { opacity: 0; transform: translate(0, 2rem); }
+  100% { opacity: 1; transform: translate(0, 0);}
+}
+.delay { animation-delay: 0.5s;}
 
 @media (max-width: 992px) {
   .text-sm-center {
